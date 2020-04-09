@@ -1,0 +1,42 @@
+export default {
+    english: {
+        title: 'Random Number Table',
+        doubts: 'Any doubts?',
+        new: 'New table',
+        modalTitle: 'Help',
+        modalText: 'The random number table is a manual randomization process which is often used in Statistics.\n\n How to use this?\n\n 1) Choose a direction of reading, such as horizontal, vertical or diagonal.\n\n 2) Decide to read from left to right (like in English) or from right to left (like in Arabic).\n\n 3) If the greatest number that suits you has 2 digits, read the table grouping the elements 2 by 2. Such as 63 10 08. If the greatest number that suits you has 3 digits, read like so: 631 008. And so on...\n\n Finally, ignore the numbers that do not fit your needs and pick those that do.',
+        modalClose: 'Tap anywhere to close.',
+    },
+    portuguese: {
+        title: 'Tabela de Números Aleatórios',
+        doubts: 'Alguma dúvida?',
+        new: 'Nova tabela',
+        modalTitle: 'Ajuda',
+        modalText: 'A Tabela de Números Aleatórios é um processo de randomização mais manual que é muito usado na Estatística.\n\n Como utilizar?\n\n 1) Escolha uma direção de leitura, como horizontal, vertical ou diagonal.\n\n 2) Decida se vai ler da esquerda para a direita (como em Português) ou da direita para esquerda (como em Árabe).\n\n 3) Se o maior número que te atende tem 2 dígitos, leia a tabela agrupando seus elementos de 2 em 2. Como 63 10 08. Se o maior número que te atende tem 3 dígitos, a tabela seria lida assim: 631 008. E assim por diante...\n\n Para finalizar, ignore os números que não atendem suas exigências e selecione aqueles que atendem.',
+        modalClose: 'Clique para fechar.',
+    },
+    spanish: {
+        title: 'Tabla de Números Aleatorios',
+        doubts: '¿Alguna duda?',
+        new: 'Nueva tabla',
+        modalTitle: 'Ayuda',
+        modalText: 'La tabla de números aleatorios es un proceso de aleatorización manual que se utiliza a menudo en estadística.\n\n ¿Cómo se utiliza?\n\n 1) Elija una dirección de lectura, como horizontal, vertical o diagonal.\n\n 2) Decida leer de izquierda a derecha, como en inglés, o de derecha a izquierda, como en árabe.\n\n 3) Si el número mayor que le conviene tiene 2 dígitos, lea la tabla que agrupa los elementos de 2 en 2. Como por ejemplo 63 10 08. Si el número mayor que le conviene tiene 3 dígitos, léalo así: 631 008. Y así sucesivamente...\n\n Finalmente, ignora los números que no se ajustan a tus necesidades y escoge los que sí lo hacen.',
+        modalClose: 'Haga clic para cerrar.',
+    },
+    chinese: {
+        title: '随机数表',
+        doubts: '任何质疑？',
+        new: '生成新表',
+        modalTitle: '救命',
+        modalText: '随机数表是手动随机过程，在统计中非常有用。\n\n 如何使用？\n\n 1) 选择要读取的方向，例如垂直，水平和对角线。\n\n 2) 决定从左到右的阅读，就像在英语中一样，还是从右到左，就像在阿拉伯语中一样。\n\n 3) 如果您可能的最大数字为2位，则将数字2分组为2。如63 10 08. 如果最大的数字有3位数字,你会这样:631 008。 这样就可以得到模式。\n\n 最后，忽略不适合您的数字并选择适合的数字。',
+        modalClose: '点按任意位置以关闭。',
+    },
+    german: {
+        title: 'Zufallszahlentabelle',
+        doubts: 'Zweifel?',
+        new: 'Neue Tabelle',
+        modalTitle: 'Hilfe',
+        modalText: 'Die Zufallszahlentabelle ist ein manuelles Zufallsverfahren, das häufig in der Statistik verwendet wird.\n\n Wie wird sie verwendet?\n\n 1) Wählen Sie eine Leserichtung, z.B. horizontal, vertikal oder diagonal.\n\n 2) Entscheiden Sie sich dafür, von links nach rechts zu lesen, wie im Englischen, oder von rechts nach links, wie im Arabischen.\n\n 3) Wenn die größte Zahl, die Ihnen zusagt, 2 Ziffern hat, lesen Sie die Tabelle, die die Elemente 2 mal 2 gruppiert, wie z.B. 63 10 08. Wenn die größte Zahl, die zu Ihnen passt, 3 Stellen hat, lesen Sie so: 631 008. Und so weiter...\n\n Ignorieren Sie schließlich die Zahlen, die Ihnen nicht passen, und wählen Sie diejenigen aus, die Ihnen passen.',
+        modalClose: 'Klicken Sie zum Schließen.',
+    },
+}

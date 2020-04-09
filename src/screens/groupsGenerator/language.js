@@ -1,0 +1,42 @@
+export default {
+    english: {
+        title: 'Groups Generator',
+        people: 'People',
+        groups: 'Groups',
+        enterTot: 'Enter Total',
+        enterNum: 'Enter num.',
+        sortGroups: 'SORT GROUPS',
+    },
+    portuguese: {
+        title: 'Gerador de Grupos',
+        people: 'Pessoas',
+        groups: 'Grupos',
+        enterTot: 'Digite total',
+        enterNum: 'Digite núm.',
+        sortGroups: 'GERAR GRUPOS',
+    },
+    spanish: {
+        title: 'Generador de Grupos',
+        people: 'Personas',
+        groups: 'Grupos',
+        enterTot: 'Escriba total',
+        enterNum: 'Escriba núm.',
+        sortGroups: 'GENERAR GRUPOS',
+    },
+    chinese: {
+        title: '组生成器',
+        people: '人数',
+        groups: '组数',
+        enterTot: '输入总数',
+        enterNum: '输入号码',
+        sortGroups: '产生团体',
+    },
+    german: {
+        title: 'Gruppengenerator',
+        people: 'Personen',
+        groups: 'Gruppen',
+        enterTot: 'Insgesamt',
+        enterNum: 'Nummer',
+        sortGroups: 'Gruppen bilden',
+    },
+}
