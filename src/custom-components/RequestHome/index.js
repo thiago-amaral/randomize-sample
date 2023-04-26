@@ -75,7 +75,7 @@ class Service extends React.Component {
     this.setState({ loading: true, loadingText: TextData[this.props.lang].loading });
 
     try {
-      console.log(Constants.installationId)
+
       const request = await fetch(`https://thiagoamaral.pythonanywhere.com/${Constants.installationId}`);
       const response = await request.json();
       this.setState({ data: response });
@@ -118,7 +118,7 @@ class Service extends React.Component {
         </Modal>
 
         <Header />
-        <Text style={styles.titleText}>Randomization Service</Text>
+        <Text style={styles.titleText}>{TextData[this.props.lang].title}</Text>
         <View style={styles.buttonsContainer}>
           <TouchableOpacity disabled={this.state.loading} onPress={() => this.props.action()} style={styles.button}><Text style={styles.btnText}>{TextData[this.props.lang].newRequest}</Text></TouchableOpacity>
           <TouchableOpacity onPress={async () => {

@@ -6,8 +6,8 @@ export default StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#243447',
     },
-    titleText : {
-        fontSize: 24, 
+    titleText: {
+        fontSize: 24,
         paddingTop: 10,
         fontWeight: 'bold',
         color: '#bdc3c7',

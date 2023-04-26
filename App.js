@@ -1,6 +1,3 @@
-// UPDATE app.json IF THIS BUILD GETS OPTIMAL
-// + UPDATE babel stuff
-// + BUNDLE ICONS CONFIG
 import React from 'react';
 import { View, Text } from 'react-native';
 import Icon from '@expo/vector-icons/Ionicons';
@@ -19,53 +16,53 @@ Text.defaultProps = Text.defaultProps || {};
 Text.defaultProps.maxFontSizeMultiplier = 1.2;
 
 const tabNavigator = createMaterialBottomTabNavigator(
-{
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: {
-      tabBarIcon: ({ tintColor }) => (
-        <View><Icon style={{color: tintColor}} size={25} name={'ios-home'} /></View>
-      ),
+  {
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <View><Icon style={{ color: tintColor }} size={25} name={'ios-home'} /></View>
+        ),
+      },
     },
+
+    Service: {
+      screen: ServiceScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <View><Icon style={{ color: tintColor }} size={25} name={'ios-send'} /></View>
+        ),
+      },
+    },
+
+    Settings: {
+      screen: SettingsScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <View><Icon style={{ color: tintColor }} size={25} name={'ios-settings'} /></View>
+        ),
+      },
+    },
+
   },
 
-  Service: {
-    screen: ServiceScreen,
-    navigationOptions: {
-      tabBarIcon: ({ tintColor }) => (
-        <View><Icon style={{color: tintColor}} size={25} name={'ios-send'} /></View>
-      ),
-    },
-  },
-
-  Settings: {
-    screen: SettingsScreen,
-    navigationOptions: {
-      tabBarIcon: ({ tintColor }) => (
-        <View><Icon style={{color: tintColor}} size={25} name={'ios-settings'} /></View>
-      ),
-    },
-  },
-
-}, 
-
-{
-  initialRouteName: 'Home',
-  activeColor: '#FFF',
-  inactiveColor: '#707070',
-  barStyle: { backgroundColor: '#141D26' },
-  labeled: false,
-});
+  {
+    initialRouteName: 'Home',
+    activeColor: '#FFF',
+    inactiveColor: '#707070',
+    barStyle: { backgroundColor: '#141D26' },
+    labeled: false,
+  });
 
 const Nav = createAppContainer(tabNavigator);
 
 const theme = {
   ...DefaultTheme,
   colors: {
-      ...DefaultTheme.colors,
-      primary: '#25CCF7',
-      placeholder: '#fff',
-      text: '#fff',  
+    ...DefaultTheme.colors,
+    primary: '#25CCF7',
+    placeholder: '#fff',
+    text: '#fff',
   }
 }
 

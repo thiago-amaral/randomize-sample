@@ -1,9 +1,9 @@
 import React from 'react';
-import { 
-  View, 
+import {
+  View,
   ScrollView,
-  Text, 
-  TextInput, 
+  Text,
+  TextInput,
   TouchableOpacity,
   Alert,
 } from 'react-native';
@@ -43,7 +43,7 @@ export default class RequestForm extends React.Component {
 
       return tokenSHA256;
 
-    } catch(e) {
+    } catch (e) {
       return tokenSHA256;
     }
 
@@ -60,7 +60,7 @@ export default class RequestForm extends React.Component {
     });
   }
 
-  emailIsValid (email) {
+  emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
 
@@ -75,14 +75,14 @@ export default class RequestForm extends React.Component {
       return 'Sorry, you asked for too many samples! (Maximum is 2147483647)';
     } else if (state.samples < 1) {
       return 'Sorry, you have to ask for at least 1 sample!';
-    } else if (state.email != state.emailConfirmation) { 
+    } else if (state.email != state.emailConfirmation) {
       return 'Check if you typed your email correctly! Confirmation does not match!';
     } else if (!this.state.token) {
       return 'An error occured'
     } else {
       return '';
     }
-    
+
   }
 
   async sendRequest() {
@@ -104,7 +104,7 @@ export default class RequestForm extends React.Component {
           csv: this.state.csv,
           token: this.state.token
         }
-        
+
         const rawResp = await fetch(`https://thiagoamaral.pythonanywhere.com/${Constants.installationId}`, {
           method: 'POST',
           headers: {
@@ -123,7 +123,7 @@ export default class RequestForm extends React.Component {
 
         this.clearState();
 
-      } catch(e) {
+      } catch (e) {
         Alert.alert('Network error', 'Check your internet connection');
       }
     }
@@ -133,88 +133,88 @@ export default class RequestForm extends React.Component {
     let { props } = this;
     return (
       <ScrollView contentContainerStyle={styles.container} style={{ backgroundColor: '#141D26' }}>
-          <Header showBackButton={true} action={() => props.action()}/>
-          <Text style={styles.title}>Randomization Request</Text>
+        <Header showBackButton={true} action={() => props.action()} />
+        <Text style={styles.title}>Randomization Request</Text>
 
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Title</Text>
-            <TextInput 
-              style={styles.inputText}
-              placeholder={'Title for your request.'}
-              placeholderTextColor={'#888'}
-              maxLength={2000}
-              multiline={true}
-              value={this.state.title}
-              onChangeText={text => this.setState({ title: text })}
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Description</Text>
-            <TextInput 
-              style={styles.inputText}
-              placeholder={'Detailed description of your request. Include all information necessary.'}
-              placeholderTextColor={'#888'}
-              maxLength={8000}
-              multiline={true}
-              value={this.state.description}
-              onChangeText={text => this.setState({ description: text })}
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Email</Text>
-            <TextInput 
-              style={styles.inputText}
-              placeholder={'Email to send result files.'}
-              placeholderTextColor={'#888'}
-              maxLength={1100}
-              multiline={true}
-              value={this.state.email}
-              onChangeText={text => this.setState({ email: text })}
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Email Confirmation</Text>
-            <TextInput 
-              style={styles.inputText}
-              placeholder={'Confirm the email typed above.'}
-              placeholderTextColor={'#888'}
-              maxLength={1100}
-              multiline={true}
-              value={this.state.emailConfirmation}
-              onChangeText={text => this.setState({ emailConfirmation: text })}
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Samples</Text>
-            <TextInput 
-              style={styles.inputText}
-              placeholder={'How many randomized samples would you like?'}
-              placeholderTextColor={'#888'}
-              maxLength={10}
-              multiline={true}
-              value={this.state.samples.toString()}
-              onChangeText={text => this.setState({ samples: text })}
-              keyboardType={'numeric'}
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>CSV</Text>
-            <Text style={[styles.inputText, { color: '#888'}]}
-            >Would you like a CSV file with your results?</Text>
-            <Switch 
-              value={this.state.csv}
-              onValueChange={() => this.setState({ csv: !this.state.csv })}
-              color='#25CCF7'
-              style={{ alignSelf: 'center' }}
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Title</Text>
+          <TextInput
+            style={styles.inputText}
+            placeholder={'Title for your request.'}
+            placeholderTextColor={'#888'}
+            maxLength={2000}
+            multiline={true}
+            value={this.state.title}
+            onChangeText={text => this.setState({ title: text })}
           />
-          </View>
+        </View>
 
-          <TouchableOpacity onPress={() => this.sendRequest()} style={styles.buttonContainer}><Text style={styles.buttonTitle}>SEND</Text></TouchableOpacity>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Description</Text>
+          <TextInput
+            style={styles.inputText}
+            placeholder={'Detailed description of your request. Include all information necessary.'}
+            placeholderTextColor={'#888'}
+            maxLength={8000}
+            multiline={true}
+            value={this.state.description}
+            onChangeText={text => this.setState({ description: text })}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput
+            style={styles.inputText}
+            placeholder={'Email to send result files.'}
+            placeholderTextColor={'#888'}
+            maxLength={1100}
+            multiline={true}
+            value={this.state.email}
+            onChangeText={text => this.setState({ email: text })}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Email Confirmation</Text>
+          <TextInput
+            style={styles.inputText}
+            placeholder={'Confirm the email typed above.'}
+            placeholderTextColor={'#888'}
+            maxLength={1100}
+            multiline={true}
+            value={this.state.emailConfirmation}
+            onChangeText={text => this.setState({ emailConfirmation: text })}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Samples</Text>
+          <TextInput
+            style={styles.inputText}
+            placeholder={'How many randomized samples would you like?'}
+            placeholderTextColor={'#888'}
+            maxLength={10}
+            multiline={true}
+            value={this.state.samples.toString()}
+            onChangeText={text => this.setState({ samples: text })}
+            keyboardType={'numeric'}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>CSV</Text>
+          <Text style={[styles.inputText, { color: '#888' }]}
+          >Would you like a CSV file with your results?</Text>
+          <Switch
+            value={this.state.csv}
+            onValueChange={() => this.setState({ csv: !this.state.csv })}
+            color='#25CCF7'
+            style={{ alignSelf: 'center' }}
+          />
+        </View>
+
+        <TouchableOpacity onPress={() => this.sendRequest()} style={styles.buttonContainer}><Text style={styles.buttonTitle}>SEND</Text></TouchableOpacity>
 
       </ScrollView>
     );

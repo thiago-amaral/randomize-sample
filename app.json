@@ -3,7 +3,6 @@
     "name": "RandomIZE",
     "slug": "RandomIZE",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android"
@@ -21,10 +20,18 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+      "./assets/image-files/*",
+      "./node_modules/@expo/vector-icons/**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.thiagoamaral.randomIZE",
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "com.thiagoamaral.randomIZE",
+      "permissions": [],
+      "versionCode": 4
+    },
+    "description": "A great randomization toolkit! It can be used for literally any random process! The range at which randomIZE can be applied goes from a simple game, to classrooms or research facilities; randomness is all around us!"
   }
 }

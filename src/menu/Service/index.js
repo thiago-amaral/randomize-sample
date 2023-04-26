@@ -10,9 +10,9 @@ class Service extends React.Component {
 
   render() {
     return (
-      this.state.home 
-      ? <RequestHome action={() => this.setState({ home: false })} />
-      : <RequestForm action={() => this.setState({ home: true })} />
+      this.state.home
+        ? <RequestHome action={() => this.setState({ home: false })} />
+        : <RequestForm action={() => this.setState({ home: true })} lang={this.props.lang} />
     );
   }
 }
